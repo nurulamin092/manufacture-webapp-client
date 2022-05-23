@@ -2,8 +2,9 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Bismillah</h1>
+    <div>
+      <h1 className='text-5xl font-bold text-secondary  '>Bismillah</h1>
+      <button class="btn">Button</button>
     </div>
   );
 }
