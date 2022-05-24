@@ -5,6 +5,7 @@ const Navbar = () => {
     const menuItems = <>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
+        <li><Link to="/signIn">Sign In</Link></li>
     </>
     return (
         <div className="navbar bg-base-100">
@@ -17,7 +18,7 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">Doctors Portal</a>
+                <a className="btn btn-ghost normal-case text-xl">Bicycle Manufacture</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
