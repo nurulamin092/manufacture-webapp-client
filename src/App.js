@@ -5,6 +5,7 @@ import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import SignIn from './Pages/Login/SignIn';
 import Footer from './Pages/Shared/Footer';
+import RequireAuth from './Pages/Login/RequireAuth';
 function App() {
 
   return (
@@ -12,7 +13,7 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
+        <Route path="about" element={<RequireAuth><About /></RequireAuth>} />
         <Route path="signIn" element={<SignIn />} />
       </Routes>
       <Footer></Footer>
