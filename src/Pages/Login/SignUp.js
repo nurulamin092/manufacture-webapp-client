@@ -139,7 +139,7 @@ const SignUp = () => {
                         {signInError}
                         <input className='btn  w-full max-w-xs' type="submit" value='Sign Up' />
                     </form>
-                    <p>Already have a account? <Link className='text-primary' to='/login'>Please Login</Link></p>
+                    <p>Already have a account? <Link className='text-primary' to='/signIn'>Please Login</Link></p>
                     <div className="divider">OR</div>
                     <button onClick={() => signInWithGoogle()} className="btn btn-outline">CONTINUE WITH GOOGLE</button>
                     <div className="card-actions justify-end">
