@@ -37,18 +37,18 @@ const SignIn = () => {
     };
     return (
         <div className='flex h-screen justify-center items-center'>
-            <div class="card w-96 bg-base-100 shadow-xl">
-                <div class="card-body">
-                    <h2 class="card-title">Please Sign IN</h2>
-                    <div class="card-actions justify-end">
-                        <div class="flex flex-col w-full border-opacity-50">
+            <div className="card w-96 bg-base-100 shadow-xl">
+                <div className="card-body">
+                    <h2 className="card-title">Please Sign IN</h2>
+                    <div className="card-actions justify-end">
+                        <div className="flex flex-col w-full border-opacity-50">
                             <form onSubmit={handleSubmit(onSubmit)}>
-                                <div class="form-control w-full max-w-xs">
-                                    <label class="label">
-                                        <span class="label-text">Email</span>
+                                <div className="form-control w-full max-w-xs">
+                                    <label className="label">
+                                        <span className="label-text">Email</span>
                                     </label>
                                     <input type="text" placeholder="Your Email"
-                                        class="input input-bordered w-full max-w-xs"
+                                        className="input input-bordered w-full max-w-xs"
                                         {...register("email", {
                                             required: {
                                                 value: true,
@@ -60,7 +60,7 @@ const SignIn = () => {
                                             }
                                         })}
                                     />
-                                    <label class="label">
+                                    <label className="label">
                                         {
                                             errors.email?.type === 'required' &&
                                             <span className='label-text-alt text-red-500'>
@@ -105,7 +105,7 @@ const SignIn = () => {
                                 <input className='btn  w-full max-w-xs' type="submit" value='Login' />
                             </form>
                             <p>New to Bicycle Manufacture? <Link className='text-primary' to='/signup'>Create new account</Link></p>
-                            <div class="divider">OR</div>
+                            <div className="divider">OR</div>
                             <button onClick={() => signInWithGoogle()} className="btn btn-active btn-secondary">Google Login</button>
                         </div>
                     </div>
