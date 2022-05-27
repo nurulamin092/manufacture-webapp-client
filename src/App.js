@@ -7,6 +7,9 @@ import SignIn from './Pages/Login/SignIn';
 import Footer from './Pages/Shared/Footer';
 import RequireAuth from './Pages/Login/RequireAuth';
 import SignUp from './Pages/Login/SignUp';
+// import AddProduct from './Pages/Home/AddProduct';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
 
   return (
@@ -14,10 +17,12 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
+        {/* <Route path="/addProduct" element={<RequireAuth><AddProduct /></RequireAuth>} /> */}
         <Route path="about" element={<RequireAuth><About /></RequireAuth>} />
         <Route path='signup' element={<SignUp />} />
         <Route path="signIn" element={<SignIn />} />
       </Routes>
+      <ToastContainer />
       <Footer></Footer>
     </div>
   );

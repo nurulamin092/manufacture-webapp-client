@@ -10,6 +10,9 @@ const Navbar = () => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
         {
+            user && <li><Link to="/addProduct">App Product</Link></li>
+        }
+        {
             user ? <button onClick={() => signOut(auth)}>Sign Out</button> : <li><Link to="/signIn">Sign In</Link></li>
         }
     </>

@@ -4,20 +4,23 @@
         "price": 299,
         "description": "Our denim quilt cover is the real deal. The genuine article. Enzyme washed, double stitched, complete with brass zippers on the euros, we just know youll end up loving this bedlinen even more than your favourite pair of jeans.",
         "img": "https://i.ibb.co/zN8tgHQ/img1.png ",
-        "quantity": 1400
+        "quantity": 1400,
+        "minOrder": 100
     },
     {
         "name": "High quality OC-M26182DA cheap price 26 inch mountain bike",
         "price": 159,
         "description": "Our denim quilt cover is the real deal. The genuine article. Enzyme washed, double stitched, complete with brass zippers on the euros, we just know youll end up loving this bedlinen even more than your favourite pair of jeans",
         "img": "https://i.ibb.co/RPymds5/img2.png",
-        "quantity": 940
+        "quantity": 940,
+        "minOrder": 100
     },
     {
         "name": "Mountain bike 24 inch Steel frame Steel fork Cheap MTB Speed",
         "price": 99,
         "description": "Our denim quilt cover is the real deal. The genuine article. Enzyme washed, double stitched, complete with brass zippers on the euros, we just know youll end up loving this bedlinen even more than your favourite pair of jeans.",
         "img": "https://i.ibb.co/Fmmk1MM/img3.png",
-        "quantity": 2450
+        "quantity": 2450,
+        "minOrder": 100
     }
 ]
