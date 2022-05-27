@@ -4,7 +4,7 @@ import HomeBanner from './HomeBanner';
 import Info from './Info';
 import Products from './Products';
 import Reviews from './Reviews';
-
+import Contract from './Contract';
 const Home = () => {
     return (
         <div className=''>
@@ -13,6 +13,7 @@ const Home = () => {
             <BusinessSummary></BusinessSummary>
             <Info></Info>
             <Reviews></Reviews>
+            <Contract></Contract>
         </div>
     );
 };
