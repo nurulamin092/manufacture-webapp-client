@@ -20,6 +20,7 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         {/* <Route path="/addProduct" element={<RequireAuth><AddProduct /></RequireAuth>} /> */}
         <Route path="dashboard" element={
           <RequireAuth>

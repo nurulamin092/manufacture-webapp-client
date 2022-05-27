@@ -6,14 +6,18 @@ import auth from '../../firebase.init';
 
 const Navbar = () => {
     const [user] = useAuthState(auth);
+    const logout = () => {
+        signOut(auth);
+        localStorage.removeItem('accessToken');
+    }
     const menuItems = <>
-        <li><Link to="/">Home</Link></li>
+        <li><Link to="/home">Home</Link></li>
         <li><Link to="/about">About</Link></li>
         {
             user && <li><Link to="/dashboard">Dashboard</Link></li>
         }
         {
-            user ? <button onClick={() => signOut(auth)}>Sign Out</button> : <li><Link to="/signIn">Sign In</Link></li>
+            user ? <button onClick={logout}>Sign Out</button> : <li><Link to="/signIn">Sign In</Link></li>
         }
     </>
     return (
