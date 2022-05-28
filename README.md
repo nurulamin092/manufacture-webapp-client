@@ -9,9 +9,9 @@
 ### In this repository I will keep adding the production best practices we should follow in a MERN (MongoDB, Express.js, React.js, and Node.js) project. Also for better UX I am using https://tailwindcss.com/ for the UI. May be later I will use https://daisyui.com/ as well.
 
 Runs the app in the development mode.\
-Open (https://bicycle-manufacture.web.app/home)](https://bicycle-manufacture.web.app/) to view it in your browser.
+Open [[http://localhost:3000](https://bicycle-manufacture.web.app/) to view it in your browser.
 
-The page will reload when you make changes.\
+The page will reload when you make changes.
 You may also see any lint errors in the console.
 
 #### Below are the sample of a sample list page:<img width="440" alt="Screen Shot 2022-05-28 at 6 01 55 PM" src="https://user-images.githubusercontent.com/95200052/170824863-ecb49a10-05fe-433d-88f8-b5ba23298e63.png">
