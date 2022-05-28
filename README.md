@@ -17,19 +17,26 @@ You may also see any lint errors in the console.
 #### Below are the sample of a sample list page:
 
 
-### `npm run build`
+### Technology stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+s the name suggests, this repository is built on top of Express.js and React.js, however in the implementation detail, we will find other supporting technologies as well.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### `Client side
+*React - A JavaScript library for building user interfaces
+*daisyui
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+*React Hook Form
+* React Query
+* Firebase hook form
+`
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+
+### `Server side
+* express.js
+* mongoDb
+`
 
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
