@@ -22,7 +22,7 @@ const Products = () => {
     return (
         <div className='my-28'>
             <div className='text-center uppercase'>
-                <h2 className='text-4xl text-primary  font-bold'>Our Products</h2>
+                <h2 className='text-4xl text-primary  font-bold my-10'>Our Products</h2>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {
