@@ -14,6 +14,7 @@ import PageNotFound from './Pages/Shared/PageNotFound';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import MyReview from './Pages/Dashboard/MyReview';
 import Users from './Pages/Dashboard/Users';
+import RequireAdmin from './Pages/Login/RequireAdmin';
 function App() {
 
   return (
@@ -28,7 +29,7 @@ function App() {
             <Dashboard />
           </RequireAuth>}>
           <Route path='myReview' element={<MyReview></MyReview>}></Route>
-          <Route path='users' element={<Users></Users>}></Route>
+          <Route path='users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
         </Route>
         <Route path="about" element={<RequireAuth><About /></RequireAuth>} />
         <Route path='signup' element={<SignUp />} />
