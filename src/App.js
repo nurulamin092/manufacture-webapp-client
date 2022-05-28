@@ -15,6 +15,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import MyReview from './Pages/Dashboard/MyReview';
 import Users from './Pages/Dashboard/Users';
 import RequireAdmin from './Pages/Login/RequireAdmin';
+import AddProduct from './Pages/Dashboard/AddProduct';
 function App() {
 
   return (
@@ -23,20 +24,19 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        {/* <Route path="/addProduct" element={<RequireAuth><AddProduct /></RequireAuth>} /> */}
         <Route path="dashboard" element={
           <RequireAuth>
             <Dashboard />
           </RequireAuth>}>
           <Route path='myReview' element={<MyReview></MyReview>}></Route>
           <Route path='users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
+          <Route path='addProduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
         </Route>
         <Route path="about" element={<RequireAuth><About /></RequireAuth>} />
         <Route path='signup' element={<SignUp />} />
         <Route path="signIn" element={<SignIn />} />
         <Route path='*' element={<PageNotFound></PageNotFound>} />
       </Routes>
-
       <ToastContainer />
       <Footer></Footer>
     </div>
