@@ -16,6 +16,7 @@ import MyReview from './Pages/Dashboard/MyReview';
 import Users from './Pages/Dashboard/Users';
 import RequireAdmin from './Pages/Login/RequireAdmin';
 import AddProduct from './Pages/Dashboard/AddProduct';
+import ManageAllProduct from './Pages/Dashboard/ManageAllProduct';
 function App() {
 
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path='myReview' element={<MyReview></MyReview>}></Route>
           <Route path='users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
           <Route path='addProduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
+          <Route path='allProduct' element={<RequireAdmin><ManageAllProduct></ManageAllProduct></RequireAdmin>}></Route>
         </Route>
         <Route path="about" element={<RequireAuth><About /></RequireAuth>} />
         <Route path='signup' element={<SignUp />} />
