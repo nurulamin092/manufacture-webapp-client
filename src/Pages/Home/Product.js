@@ -16,7 +16,9 @@ const Product = ({ product, setPurchase }) => {
                     <label
                         htmlFor="purchase-modal"
                         onClick={() => setPurchase(product)}
-                        className='btn bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-2xl uppercase'>
+                        className='btn bg-gradient-to-r 
+                        from-cyan-500 to-blue-500 hover:from-pink-500 
+                        hover:to-yellow-500 text-2xl uppercase'>
                         Buy Now
                     </label>
                 </div>

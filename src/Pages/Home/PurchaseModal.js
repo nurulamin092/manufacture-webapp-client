@@ -5,11 +5,42 @@ import auth from '../../firebase.init';
 const PurchaseModal = ({ purchase, setPurchase }) => {
     const { _id, name, img, price, quantity } = purchase;
     const [user] = useAuthState(auth);
-    const handlePurchase = (e) => {
-        e.preventDefault();
-        // const name = e.target.name.value;
-        console.log(_id, name, price, quantity);
-        setPurchase(null);
+    /*  const handlePurchase = (e) => {
+         e.preventDefault();
+         // const name = e.target.name.value;
+         console.log(_id, name, price, quantity);
+         setPurchase(null);
+     } */
+
+    const handlePurchase = event => {
+        event.preventDefault();
+        const orders = {
+            purchaseId: _id,
+            purchase: name,
+            name,
+            price, quantity,
+            customerEmail: user.email,
+            customerName: user.displayName,
+            // phone: event.target.phone.value
+        }
+
+        fetch('http://localhost:5000/orders', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(orders)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data) {
+                    toast(`Your Order is successful`)
+                }
+                else {
+                    toast.error(`Your order is failed`)
+                }
+                setPurchase(null);
+            });
     }
     return (
         <div>
