@@ -9,7 +9,7 @@ const Products = () => {
     const [products, setProducts] = useState([]);
     const [purchase, setPurchase] = useState(null);
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://secure-shore-47038.herokuapp.com/product')
             .then(res => res.json())
             .then(data => {
                 setProducts(data)
