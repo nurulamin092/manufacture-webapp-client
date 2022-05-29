@@ -54,13 +54,13 @@ const Purchase = ({ purchase, setPurchase }) => {
 
     return (
         <div>
-            <div class="hero min-h-screen bg-base-200">
-                <div class="hero-content flex-col lg:flex-row">
-                    {/* <img src="https://api.lorem.space/image/movie?w=260&h=400" class="max-w-sm rounded-lg shadow-2xl" /> */}
+            <div className="hero min-h-screen bg-base-200">
+                <div className="hero-content flex-col lg:flex-row">
+                    {/* <img src="https://api.lorem.space/image/movie?w=260&h=400" className="max-w-sm rounded-lg shadow-2xl" /> */}
                     <div>
-                        {/*   <h1 class="text-5xl font-bold">{product.name}</h1>
-                        <p class="py-6"></p>
-                        <button class="btn btn-primary">Get Started</button> */}
+                        {/*   <h1 className="text-5xl font-bold">{product.name}</h1>
+                        <p className="py-6"></p>
+                        <button className="btn btn-primary">Get Started</button> */}
 
                         {/* <div className='product-container'>
                             <img height={300} src={product.photoUrl} alt="" />

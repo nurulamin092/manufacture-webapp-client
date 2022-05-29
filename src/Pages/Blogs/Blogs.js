@@ -48,12 +48,12 @@ const Blogs = () => {
                 </div>
             </div>
 
-            <div class="hero ">
-                <div class="hero-content flex-col lg:flex-row-reverse">
-                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20200520193336/Untitled-Diagram108.png" class="max-w-sm rounded-lg shadow-2xl" />
+            <div className="hero ">
+                <div className="hero-content flex-col lg:flex-row-reverse">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20200520193336/Untitled-Diagram108.png" className="max-w-sm rounded-lg shadow-2xl" />
                     <div>
                         <h1 className="text-5xl text-primary font-bold my-5">3.How does prototypical inheritance work?</h1>
-                        <p class="py-6">he Prototypal Inheritance is a feature in javascript used to add methods and properties in objects. It is a method by which an object can inherit the properties and methods of another object. Traditionally, in order to get and set the [[Prototype]] of an object, we use Object.getPrototypeOf and Object</p>
+                        <p className="py-6">he Prototypal Inheritance is a feature in javascript used to add methods and properties in objects. It is a method by which an object can inherit the properties and methods of another object. Traditionally, in order to get and set the [[Prototype]] of an object, we use Object.getPrototypeOf and Object</p>
 
                     </div>
                 </div>

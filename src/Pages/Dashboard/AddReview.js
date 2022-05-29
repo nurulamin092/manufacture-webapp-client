@@ -14,6 +14,7 @@ const AddReview = () => {
             customerName: user.displayName,
             customerPhoto: user.photoURL,
             comment: e.target.comment.value,
+            rating: e.target.rating.value,
         }
         fetch('http://localhost:5000/review', {
             method: 'POST',
@@ -36,9 +37,9 @@ const AddReview = () => {
     }
     return (
         <div>
-            <div class="card w-96 bg-base-100 shadow-xl">
-                <div class="card-body">
-                    <h2 class="card-title">Add a Review</h2>
+            <div className="card w-96 bg-base-100 shadow-xl">
+                <div className="card-body">
+                    <h2 className="card-title">Add a Review</h2>
                     <form onSubmit={handleReview} className='grid grid-cols-1 gap-3 justify-items-center'>
                         <img src={user?.photoURL} alt="" />
                         <input type="text" name='name'
@@ -47,6 +48,10 @@ const AddReview = () => {
                         <input
                             type="text" name='email'
                             disabled value={user?.email}
+                            className="input input-bordered w-full max-w-xs"
+                        />
+                        <input
+                            type="number" name='rating'
                             className="input input-bordered w-full max-w-xs"
                         />
                         <textarea
