@@ -27,7 +27,7 @@ const AddProduct = () => {
                         minOrder: data.minOrder,
                         img: img
                     }
-                    fetch('https://secure-shore-47038.herokuapp.com/product', {
+                    fetch('http://localhost:5000/product', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

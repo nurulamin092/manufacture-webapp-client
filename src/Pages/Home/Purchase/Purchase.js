@@ -10,7 +10,7 @@ const Purchase = ({ purchase, setPurchase }) => {
     const [user] = useAuthState(auth);
     const [product, setProduct] = useState({});
     useEffect(() => {
-        const localhostUrl = `https://secure-shore-47038.herokuapp.com/product/${productId}`;
+        const localhostUrl = `http://localhost:5000/product/${productId}`;
         //const url = `https://serene-brook-28678.herokuapp.com/products/${productId}`;
         fetch(localhostUrl)
             .then(res => res.json())
@@ -31,7 +31,7 @@ const Purchase = ({ purchase, setPurchase }) => {
               phone: e.target.phone.value,
   
           }
-          fetch('https://secure-shore-47038.herokuapp.com/orders', {
+          fetch('http://localhost:5000/orders', {
               method: 'POST',
               headers: {
                   'content-type': 'application/json'

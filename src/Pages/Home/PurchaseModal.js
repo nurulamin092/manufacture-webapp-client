@@ -3,14 +3,9 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 const PurchaseModal = ({ purchase, setPurchase }) => {
-    const { _id, name, img, price, quantity } = purchase;
+    const { _id, name, img, price } = purchase;
     const [user] = useAuthState(auth);
-    /*  const handlePurchase = (e) => {
-         e.preventDefault();
-         // const name = e.target.name.value;
-         console.log(_id, name, price, quantity);
-         setPurchase(null);
-     } */
+
 
     const handlePurchase = event => {
         event.preventDefault();
@@ -18,13 +13,14 @@ const PurchaseModal = ({ purchase, setPurchase }) => {
             purchaseId: _id,
             purchase: name,
             name,
-            price, quantity,
+            price,
             customerEmail: user.email,
             customerName: user.displayName,
-            // phone: event.target.phone.value
+            phone: event.target.phone.value,
+            quantity: event.target.quantity.value
         }
 
-        fetch('https://secure-shore-47038.herokuapp.com/orders', {
+        fetch('http://localhost:5000/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -61,8 +57,9 @@ const PurchaseModal = ({ purchase, setPurchase }) => {
                                 disabled value={user?.email}
                                 className="input input-bordered w-full max-w-xs"
                             />
+                            <input type="text" name="phone" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" />
                             <input
-                                type="number" name='quantity' value={quantity} placeholder="Your Phone"
+                                type="number" name='quantity' placeholder="Order Quantity"
                                 className="input input-bordered w-full max-w-xs"
                             />
                             <input
