@@ -1,5 +1,5 @@
 import React from 'react';
-const Product = ({ product }) => {
+const Product = ({ product, setPurchase }) => {
     const { name, img, description, price, quantity, minOrder } = product;
     return (
         <div className="card lg:max-w-lg bg-base-100 shadow-xl">
@@ -13,7 +13,12 @@ const Product = ({ product }) => {
                 <p>Minimum Order {minOrder}</p>
                 <p>Price ${price}</p>
                 <div className="card-actions">
-                    <button className="btn bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-2xl">Buy Now</button>
+                    <label
+                        htmlFor="purchase-modal"
+                        onClick={() => setPurchase(product)}
+                        className='btn bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-2xl uppercase'>
+                        Buy Now
+                    </label>
                 </div>
             </div>
         </div>

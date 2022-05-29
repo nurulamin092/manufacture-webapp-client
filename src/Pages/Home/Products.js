@@ -2,16 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
 import Loading from '../Shared/Loading';
 import Product from './Product';
+import PurchaseModal from './PurchaseModal';
 
 const Products = () => {
-    /* const { data: products, isLoading, refetch } = useQuery('products', () => {
-        fetch('http://localhost:5000/product')
-            .then(res => res.json())
-    })
-    if (isLoading) {
-        return <Loading></Loading>
-    } */
+
     const [products, setProducts] = useState([]);
+    const [purchase, setPurchase] = useState(null);
     useEffect(() => {
         fetch('http://localhost:5000/product')
             .then(res => res.json())
@@ -27,10 +23,16 @@ const Products = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {
                     products.slice(0, 3).map(product => <Product
-                        key={product._id} product={product}>
+                        key={product._id}
+                        product={product}
+                        setPurchase={setPurchase}
+                    >
                     </Product>)
                 }
             </div>
+            {
+                purchase && <PurchaseModal purchase={purchase} setPurchase={setPurchase}></PurchaseModal>
+            }
 
         </div>
     );
