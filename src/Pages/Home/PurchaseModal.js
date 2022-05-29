@@ -24,7 +24,7 @@ const PurchaseModal = ({ purchase, setPurchase }) => {
             // phone: event.target.phone.value
         }
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://secure-shore-47038.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
