@@ -22,6 +22,7 @@ import MyOrders from './Pages/Dashboard/MyOrders';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import Payment from './Pages/Dashboard/Payment';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
+import ManageAllOrders from './Pages/Dashboard/ManageAllOrders';
 function App() {
 
   return (
@@ -63,6 +64,11 @@ function App() {
           <Route path='allProduct' element={
             <RequireAdmin>
               <ManageAllProduct></ManageAllProduct>
+            </RequireAdmin>}>
+          </Route>
+          <Route path='allOrder' element={
+            <RequireAdmin>
+              <ManageAllOrders></ManageAllOrders>
             </RequireAdmin>}>
           </Route>
         </Route>
