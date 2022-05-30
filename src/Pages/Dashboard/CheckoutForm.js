@@ -50,7 +50,7 @@ const CheckoutForm = ({ order }) => {
 
         setCardError(error?.message || '')
         setSuccess('');
-        //setProcessing(true);
+        setProcessing(true);
         const { paymentIntent, error: intentError } = await stripe.confirmCardPayment(
             clientSecret,
             {
@@ -63,16 +63,36 @@ const CheckoutForm = ({ order }) => {
                 },
             },
         );
+
         if (intentError) {
             setCardError(intentError?.message);
-            // setProcessing(false);
+            setProcessing(false);
         }
+
         else {
             setCardError('');
             setTransactionId(paymentIntent.id);
             console.log(paymentIntent);
             setSuccess('Congrats! your payment is completed')
         }
+
+        const payment = {
+            order: _id,
+            transactionId: paymentIntent.id
+        }
+
+        fetch(`http://localhost:5000/order/${_id}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json',
+                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+            },
+            body: JSON.stringify(payment)
+        }).then(res => res.json())
+            .then(data => {
+                setProcessing(false);
+                console.log(data);
+            })
 
     }
     return (

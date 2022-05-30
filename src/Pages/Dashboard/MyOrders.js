@@ -31,13 +31,6 @@ const MyOrders = () => {
                 });
         }
 
-        /* if (user) {
-            fetch(`http://localhost:5000/order?customerEmail=${user.email}`)
-                .then(res => res.json())
-                .then(data => {
-                    setMyOrders(data);
-                })
-        } */
     }
         , [user, navigate])
     return (
@@ -51,7 +44,7 @@ const MyOrders = () => {
                             <th>Name</th>
                             <th>Email</th>
                             <th>Quantity</th>
-                            <th>Phone</th>
+                            {/*    <th>Phone</th> */}
                             <th>Payment</th>
                             <th>Action</th>
                         </tr>
@@ -63,15 +56,19 @@ const MyOrders = () => {
                                 <td>{order.name}</td>
                                 <td>{order.customerEmail}</td>
                                 <td>{order.quantity}</td>
-                                <td>{order.phone}</td>
+                                {/* <td>{order.phone}</td> */}
                                 <td>
-                                    {order.price &&
-                                        <Link to={`/dashboard/payment/${order._id}`}>
+                                    {(order.price && !order.paid) &&
+                                        < Link to={`/dashboard/payment/${order._id}`}>
                                             <button className='btn btn-xs btn-success'>Pay</button>
                                         </Link>
                                     }
                                     {
-                                        (order.price && order.paid) && <span className='text-success'>Paid</span>
+                                        (order.price && order.paid) &&
+                                        <div>
+                                            <p><span className='text-success'>Paid</span></p>
+                                            <p>Transaction id: <span className='text-success'>{order.transactionId}</span></p>
+                                        </div>
                                     }
                                 </td>
                                 <td>
@@ -90,7 +87,7 @@ const MyOrders = () => {
                     </tbody>
                 </table>
             </div>
-        </div>
+        </div >
     );
 };
 
