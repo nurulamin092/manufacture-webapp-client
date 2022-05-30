@@ -34,13 +34,36 @@ function App() {
           </RequireAuth>}>
 
           <Route index element={<MyProfile></MyProfile>}></Route>
-          <Route path='myOrder' element={<RequireAuth><MyOrders></MyOrders></RequireAuth>}></Route>
-          <Route path='review' element={<RequireAuth><AddReview></AddReview></RequireAuth>}></Route>
-          <Route path='users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
-          <Route path='addProduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
-          <Route path='allProduct' element={<RequireAdmin><ManageAllProduct></ManageAllProduct></RequireAdmin>}></Route>
+          <Route path='myOrder' element={
+            <RequireAuth>
+              <MyOrders>
+              </MyOrders>
+            </RequireAuth>}>
+          </Route>
+          <Route path='review' element={
+            <RequireAuth>
+              <AddReview></AddReview>
+            </RequireAuth>}>
+          </Route>
+          <Route path='users' element={
+            <RequireAdmin>
+              <Users></Users>
+            </RequireAdmin>}>
+
+          </Route>
+          <Route path='addProduct' element={
+            <RequireAdmin>
+              <AddProduct></AddProduct>
+            </RequireAdmin>}>
+
+          </Route>
+          <Route path='allProduct' element={
+            <RequireAdmin>
+              <ManageAllProduct></ManageAllProduct>
+            </RequireAdmin>}>
+          </Route>
         </Route>
-        <Route path="about" element={<RequireAuth><About /></RequireAuth>} />
+        <Route path="about" element={<About />} />
         <Route path='blogs' element={<Blogs />} />
         <Route path='signup' element={<SignUp />} />
         <Route path="signIn" element={<SignIn />} />

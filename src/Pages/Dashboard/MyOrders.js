@@ -10,7 +10,7 @@ const MyOrders = () => {
     const navigate = useNavigate()
     useEffect(() => {
         if (user) {
-            fetch(`https://secure-shore-47038.herokuapp.com/order?customerEmail=${user.email}`, {
+            fetch(`http://localhost:5000/order?customerEmail=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -32,7 +32,7 @@ const MyOrders = () => {
         }
 
         /* if (user) {
-            fetch(`https://secure-shore-47038.herokuapp.com/order?customerEmail=${user.email}`)
+            fetch(`http://localhost:5000/order?customerEmail=${user.email}`)
                 .then(res => res.json())
                 .then(data => {
                     setMyOrders(data);
