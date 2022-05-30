@@ -96,6 +96,10 @@ const MyPortfolio = () => {
                     </thead>
                     <tbody>
                         <tr>
+                            <td>Bicycle Manufacture</td>
+                            <td><a href="https://bicycle-manufacture.web.app/home" target="_blank">Link</a></td>
+                        </tr>
+                        <tr>
                             <td>Doctor Service Provider</td>
                             <td><a href="https://doctor-service-provider.web.app/" target="_blank">Link</a></td>
                         </tr>
@@ -103,10 +107,7 @@ const MyPortfolio = () => {
                             <td>Warehouse</td>
                             <td><a href="https://laptop-warehouse-9b862.web.app/" target="_blank">Link</a></td>
                         </tr>
-                        <tr>
-                            <td>Bicycle Manufacture</td>
-                            <td><a href="https://bicycle-manufacture.web.app/home" target="_blank">Link</a></td>
-                        </tr>
+
                     </tbody>
 
                 </table>
