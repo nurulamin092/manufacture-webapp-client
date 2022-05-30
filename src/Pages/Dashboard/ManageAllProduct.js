@@ -8,7 +8,7 @@ const ManageAllProduct = () => {
     const [deletingProduct, setDeletingProduct] = useState(null);
 
     const { data: products, isLoading, refetch } = useQuery('products', () =>
-        fetch('http://localhost:5000/allProduct', {
+        fetch('https://secure-shore-47038.herokuapp.com/allProduct', {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }

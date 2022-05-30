@@ -20,7 +20,7 @@ const PurchaseModal = ({ purchase, setPurchase }) => {
             quantity: event.target.quantity.value
         }
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://secure-shore-47038.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

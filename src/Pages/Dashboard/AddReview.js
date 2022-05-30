@@ -16,7 +16,7 @@ const AddReview = () => {
             comment: e.target.comment.value,
             rating: e.target.rating.value,
         }
-        fetch('http://localhost:5000/review', {
+        fetch('https://secure-shore-47038.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
