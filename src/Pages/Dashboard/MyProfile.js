@@ -28,17 +28,13 @@ const MyProfile = () => {
                 <div className="card-body">
                     <h2 className="card-title">Update your Information</h2>
                     <form onSubmit={handUser} className='grid grid-cols-1 gap-3 justify-items-center'>
-                        <img src={user?.photoURL} alt="" />
-                        <input type="text" name='name'
-                            disabled value={user?.displayName}
-                            className="input input-bordered w-full max-w-xs" />
+
                         <input
-                            type="text" name='email'
-                            disabled value={user?.email}
+                            type="text" name='address'
                             className="input input-bordered w-full max-w-xs"
                         />
                         <input
-                            type="text" name='address'
+                            type="text" name='phone'
                             className="input input-bordered w-full max-w-xs"
                         />
 
