@@ -16,11 +16,11 @@ const Review = ({ review }) => {
                         <h4 className='text-xl'> Customer Name: {review.customerName}</h4>
                         <h4 className='text-xl'> Customer Email {review.customerEmail}</h4>
                         <p> Review: {review.comment}</p>
-                        <div class="rating rating-xs">
-                            <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                        <div className="rating rating-xs">
+                            <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" />
                         </div>
 
                     </div>

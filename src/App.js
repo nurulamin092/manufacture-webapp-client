@@ -21,6 +21,7 @@ import Blogs from './Pages/Blogs/Blogs';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import Payment from './Pages/Dashboard/Payment';
+import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 function App() {
 
   return (
@@ -65,6 +66,7 @@ function App() {
             </RequireAdmin>}>
           </Route>
         </Route>
+        <Route path="myPortfolio" element={<MyPortfolio />} />
         <Route path="about" element={<About />} />
         <Route path='blogs' element={<Blogs />} />
         <Route path='signup' element={<SignUp />} />
